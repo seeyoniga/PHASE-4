@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+body {
+  background-image: url('teambudgetplanner.jpeg');
+  background-repeat: no-repeat;
+  background-size: 1600px 820px;
+}
+</style>
+</head>
+<body>
+<left>
+<div class="container">
+  <center>
+    <h1> Team Budget Planner </h1>
+    <br>
+ 
+    <form>
+        
+        <b>
+        <div class="row mb-3">
+            Date :
+            <input type="date" id="expensedate"><br></br>
+            Income/Expense :
+            <input type="text" id="expense"><br></br>
+            Amount (income - "+" expense - "-") :
+            <input type="number" id="expenseamount"><br></br>
+        </div>       
+        </p> 
+<table id="myTable">
+  <tr>
+    <td> Date </td>
+    <td> Income/Expense </td>
+    <td> Amount </td>
+    <td> Remove Entry </td>
+  </tr>
+</table>
+
+<div class="row mb-3">
+  <h4>Total Balance: <span id="totalprice">0</span></h4> 
+</div>
+<button type="button" onclick="myFunction()">Add Expense</button>
+</b>
+</center>
+<script>
+function myFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell = row.insertCell(3);
+  cell1.innerHTML  = document.getElementById("expensedate").value;
+  cell2.innerHTML  = document.getElementById("expense").value;
+  cell3.innerHTML = document.getElementById("expenseamount").value;
+  cell.innerHTML = '<input id="Button" type="button" onclick="deleteRow(this)" value="Remove Expense" />';
+  total();
+  function total(){
+  var sumVal = 0;
+  for (var i = 1; i < table.rows.length; i++) {
+    sumVal = sumVal + parseFloat(table.rows[i].cells[2].innerHTML);
+  }
+  document.getElementById("totalprice").innerHTML =  sumVal;
+}
+}
+function deleteRow(r){
+var i=r.parentNode.parentNode.rowIndex;
+document.getElementById('myTable').deleteRow(i);
+total();
+  function total(){
+  var sumVal = 0;
+  for (var i = 1; i < table.rows.length; i++) {
+    sumVal = sumVal + parseFloat(table.rows[i].cells[2].innerHTML);
+  }
+  document.getElementById("totalprice").innerHTML =  sumVal;
+}
+}
+</script>
+</body>
+</html>
+
