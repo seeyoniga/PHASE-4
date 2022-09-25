@@ -1,0 +1,51 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "seeyo",
+      "email": "seeyo@gmail.com",
+      "price": "150"
+    },
+    {
+      "id": 2,
+      "name": "Logesh",
+      "email": "logeshr@gmail.com"
+    }
+  ],
+  "events": [
+    {
+      "id": 2,
+      "name": "Product Launch",
+      "place": "Bangalore",
+      "ctpr": "seeyoniga",
+      "ctno": "1234567890"
+    },
+    {
+      "id": 3,
+      "name": "Product prototype event",
+      "place": "Pune",
+      "ctpr": "Suriya",
+      "ctno": 2314567589
+    }
+  ],
+  "users": [
+    {
+      "id": 5001,
+      "name": "dd",
+      "email": "dd@gmail.com",
+      "password": "helloodd"
+    },
+    {
+      "id": 5002,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "welcomeadmin12"
+    },
+    {
+      "id": 5003,
+      "name": "seeyo",
+      "email": "seeyo@gmail.com",
+      "password": "heyseeyo"
+    }
+  ]
+}

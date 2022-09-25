@@ -1,0 +1,24 @@
+<table class="table">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Email ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of allUsers">
+            <th scope="row">{{ item.id }}</th>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+          </tr>          
+        </tbody>
+      </table>
+    </div>
+  </table>
+
+  <br>
+
+<h1 align="center"><a class="btn btn-primary btn-lg" [routerLink]="['/adminhome']">Go Back To Homepage</a></h1> <br>
